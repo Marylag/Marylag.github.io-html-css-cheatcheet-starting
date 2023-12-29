@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cheatsheets / Forms</title>
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Source+Code+Pro:wght@200;400;600;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Forms</h1>
+        <p class="comment">Cheatsheets / Learn HTML: Forms</p>        
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>&lt;input&gt;</code>
+                    </td>
+                    <td>Checkbox Type</td>
+                    <td>When using an HTML input element, the type="checkbox" attribute will render a single checkbox item. To create a group of checkboxes related to the same topic, they should all use the same name attribute. Since it’s a checkbox, multiple checkboxes can be selected for the same topic.</td>
+                    <td>
+                        <code>&lt;input type="checkbox" name="breakfast" value="pancakes"&gt;Pancakes 🥞&lt;br&gt;</code>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <code>&lt;textarea&gt;</code>
+                    </td>
+                    <td>Element</td>
+                    <td>The <code>textarea</code> element is used when creating a text-box for multi-line input (e.g. a comment section). The element supports the <code>rows</code> and <code>cols</code> attributes which determine the height and width, respectively, of the element.
+                        When rendered by the browser, <code>textarea</code> fields can be stretched/shrunk in size by the user, but the <code>rows</code> and <code>cols</code> attributes determine the initial size.
+                        Unlike the <code>input</code> element, the &lt;textarea&gt; element has both opening and closing tags. The <code>value</code> of the element is the content in between these tags (much like a &lt;p&gt; element). The code block shows a &lt;textarea&gt; of size 10x30 and with a <code>name</code> of <code>"comment"</code>.
+                    </td>
+                    <td><code>&lt;textarea rows="10" cols="30" name="comment"&gt;&lt;/textarea&gt;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&lt;form&gt;</code></td>
+                    <td>Element</td>
+                    <td>
+                        The HTML <code>&lt;form&gt;</code> element is used to collect and send information to an external source.
+                        <code>&lt;form&gt;</code> can contain various input elements. When a user submits the form, information in these input elements is passed to the source which is named in the <code>action</code> attribute of the form.
+                    </td>
+                    <td>
+                        <code>&lt;form method="post" action="http://server1"&gt;
+                        Enter your name:
+                        &lt;input type="text" name="fname"&gt;
+                        &lt;br/&gt;
+                        Enter your age:
+                        &lt;input type="text" name="age"&gt;
+                        &lt;br/&gt;
+                        &lt;input type="submit" value="Submit"&gt;
+                        &lt;/form&gt;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input&gt;</code></td>
+                    <td>Number Type</td>
+                    <td>
+                        HTML input elements can be of type <code>number</code>. These input fields allow the user to enter only numbers and a few special characters inside the field.
+                        The example code block shows an input with a type of number and a name of <code>balance</code>. When the input field is a part of a form, the form will receive a key-value pair with the format: <code>name</code>: <code>value</code> after form submission.
+                    </td>
+                    <td><code>&lt;input type="number" name="balance" /&gt;</code></td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>&lt;input&gt;</code>
+                    </td>
+                    <td>Element</td>
+                    <td>The HTML <code>&lt;input&gt;</code> element is used to render a variety of input fields on a webpage including text fields, checkboxes, buttons, etc. <code>&lt;input&gt;</code> element have a <code>type</code> attribute that determines how it gets rendered to a page.
+                        The example code block will create a text input field and a checkbox input field on a webpage.
+                    </td>
+                    <td>
+                        <code>&lt;label for="fname"&gt;First name:&lt;/label&gt;
+                            &lt;input type="text" name="fname" id="fname"&gt;&lt;br&gt;
+                            &lt;input type="checkbox" name="vehicle" value="Bike"&gt; I own a bike&lt;/code&gt;
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Submitting a Form</h2>
+        <p class="article">Once we have collected information in a form we can send that information somewhere else by using the <code>action</code> and <code>method</code> attribute. The <code>action</code> attribute tells the form to send the information. A URL is assigned that determines the recipient of the information. The <code>method</code> attribute tells the form what to do with that information once it’s sent. An HTTP verb is assigned to the <code>method</code> attribute that determines the action to be performed.
+            <code>&lt;form action="/index3.html" method="PUT"&gt;&lt;/form&gt;</code>
+        </p>
+        
+        <table>
+            <tbody>
+                <tr>
+                    <td><code>&lt;input&gt;</code></td>
+                    <td>Text Type</td>
+                    <td>HTML <code>&lt;input&gt;</code> elements can support text input by setting the attribute <code>type="text"</code>. This renders a single row input field that users can type text inside.
+                        The value of the <code>&lt;input&gt;</code>‘s <code>name</code> and <code>value</code> attribute of the element are sent as a key-value pair when the form is submitted.
+                    </td>
+                    <td>
+                        <code>&lt;input type="text" name="username"&gt;</code>
+                    </td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input&gt;</code></td>
+                    <td>Radio Button Type</td>
+                    <td>HTML <code>&lt;input&gt;</code> elements can be given a <code>type="radio"</code> attribute that renders a single radio button. Multiple radio buttons of a related topic are given the same <code>name</code> attribute value. Only a single option can be chosen from a group of radio buttons.
+                        The value of the selected/checked <code>&lt;input&gt;</code>’s <code>name</code> and <code>value</code> attribute of this element are sent as a key-value pair when the form is submitted.
+                    </td>
+                    <td>
+                        <code>&lt;input name="delivery_option" type="radio" value="pickup" /&gt;</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
